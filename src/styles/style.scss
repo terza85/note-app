@@ -1,0 +1,67 @@
+@import './variables';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.head-container {
+    background-color: $primaryColor;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.main-container {
+    font-family: 'Noto Serif Georgian', serif;
+    background-color: $primaryColor;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px; 
+    min-height: 700px;
+    .board-container {
+        background-image: url(../img/pin-board.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 20px;
+        .note {
+            position: relative;
+            display: inline-block;
+            width: 31%;
+            background-color: #bad946;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            &::before {
+                content: "";
+                background: url(../img/pin.png);
+                position: absolute;
+                top: 3px;
+                left: 15px;
+                width: 40px;
+                background-repeat: no-repeat;
+                background-size: 30px 30px;
+                height: 40px;
+            }
+            .body {
+                padding: 30px;
+                font-size: 1.2em;
+                color: #1b1a1a;
+            }
+            .actions {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 20px;
+                img {
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(0.85);
+                    }
+                }
+            }
+            
+        }
+    }
+}
