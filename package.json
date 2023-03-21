@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "compile": "sass --watch ./src/styles/style.scss ./src/styles/style.css"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,8 @@
     "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
-    "parcel": "^2.8.3"
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "sass": "^1.59.3"
   }
 }

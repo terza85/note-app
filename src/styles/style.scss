@@ -17,7 +17,7 @@
     font-family: 'Noto Serif Georgian', serif;
     background-color: $primaryColor;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-gap: 20px; 
     min-height: 700px;
     .board-container {
@@ -27,9 +27,10 @@
         margin: 20px;
         .note {
             position: relative;
-            display: inline-block;
+            // display: inline-block; 
             width: 31%;
-            background-color: #bad946;
+            background: rgb(166,195,53);
+            background: linear-gradient(278deg, rgba(166,195,53,1) 0%, rgba(186,217,64,1) 52%, rgba(176,226,99,1) 100%);
             margin: 10px;
             overflow: hidden;
             border-radius: 10px;
@@ -62,6 +63,76 @@
                 }
             }
             
+        }
+    }
+}
+
+.sidebar {
+    background: rgb(141,188,244);
+    background: linear-gradient(278deg, rgba(141,188,244,1) 0%, rgba(216,221,255,1) 52%, rgba(131,190,249,1) 100%);
+    display: flex;
+    height: 400px;
+    margin: 20px 20px 0px 0px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .button{
+        background: #3498db;
+        background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+        background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+        background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+        background-image: -o-linear-gradient(top, #3498db, #2980b9);
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+        -webkit-border-radius: 14;
+        -moz-border-radius: 14;
+        border-radius: 14px;
+        -webkit-box-shadow: 0px 1px 9px #b8afb8;
+        -moz-box-shadow: 0px 1px 9px #b8afb8;
+        box-shadow: 0px 1px 9px #b8afb8;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        border: solid #1f628d 0px;
+        text-decoration: none;
+        &:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+    }
+    .naslov {
+        padding: 9px;
+        font-size: 18px;
+        border-width: 0px;
+        border-color: #ffffff;
+        background-color: #FFFFFF;
+        color: #585656;
+        border-style: solid;
+        border-radius: 0px;
+        box-shadow: 0px 0px 7px rgba(66,66,66,.24);
+        text-shadow: -50px 0px 0px rgba(66,66,66,.0);
+        &:focus {
+            outline:none;
+        }
+    }
+    .text {
+        padding: 9px;
+        font-size: 18px;
+        border-width: 0px;
+        border-color: #ffffff;
+        background-color: #FFFFFF;
+        color: #585656;
+        border-style: solid;
+        border-radius: 0px;
+        box-shadow: 0px 0px 7px rgba(66,66,66,.24);
+        text-shadow: -50px 0px 0px rgba(66,66,66,.0);
+        &:focus {
+            outline:none;
         }
     }
 }
