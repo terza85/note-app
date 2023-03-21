@@ -4,54 +4,47 @@ import foo from "/src/img/finish.png";
 // console.log(images);
 const grid = document.querySelector('.board-container');
 const naslov = document.querySelector('.naslov');
-const text = document.querySelector('.text');
+const noteText = document.querySelector('.noteText');
 const newNote = document.getElementById('newNote');
 const addNote = document.getElementById('addNote')
 
 
 newNote.addEventListener('click', () => {
-    console.log(naslov.value);
-    console.log(text.value);
+
 })
 
 window.onload = () => {
-
     const msnry = new Masonry(grid, {
-        // options
         itemSelector: '.note',
         gutter: 10,
-
     });
 
     addNote.addEventListener('click', () => {
         const quitImg = require('./img/quit.png');
         const finishImg = require('./img/finish.png');
+        const textArea = noteText.value;
+        const lines = textArea.split('\n');
 
-        //     const markup = `
-        // <div class="note">
-        // <div class="body">${text.value}</div>
-        // <div class="actions">
-        // <img src=${finishImg} class="finish">
-        // <img src=${quitImg} class="quit">
-        // </div>
-        // </div>
-        // `
 
-        let noteEl = document.createElement('div'); // is a node
-        // noteEl.innerHTML = `${text.value}`;
+        const newArr = lines.filter((a) => a);
+
+
+        let noteEl = document.createElement('div');
         noteEl.classList.add('note')
 
-        let bodyEl = document.createElement('div'); // is a node
-        bodyEl.innerHTML = `${text.value}`;
+        let bodyEl = document.createElement('div');
+        newArr.forEach(el => {
+            bodyEl.innerHTML += `- ${el} <br />`;
+        });
         bodyEl.classList.add('body')
-        let actionsEl = document.createElement('div'); // is a node
+        let actionsEl = document.createElement('div');
         actionsEl.classList.add('actions')
 
-        let imgFinish = document.createElement('img'); // is a node
+        let imgFinish = document.createElement('img');
         imgFinish.src = finishImg;
         imgFinish.classList.add('finish')
 
-        let imgQuit = document.createElement('img'); // is a node
+        let imgQuit = document.createElement('img');
         imgQuit.src = quitImg;
         imgQuit.classList.add('quit')
 
@@ -61,12 +54,9 @@ window.onload = () => {
         actionsEl.appendChild(imgFinish);
         actionsEl.appendChild(imgQuit);
 
-        // msnry.appended(markup)
-        // grid.appendChild(noteEl)
-        // msnry.layout();
+
         msnry.appended(noteEl)
         msnry.layout();
 
-        // console.log(markup);
     })
 }
