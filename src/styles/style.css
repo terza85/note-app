@@ -24,6 +24,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: 20px;
+  min-height: 450px;
 }
 .main-container .board-container .note {
   position: relative;
@@ -44,6 +45,11 @@
   background-repeat: no-repeat;
   background-size: 30px 30px;
   height: 40px;
+}
+.main-container .board-container .note .title {
+  text-align: center;
+  background-color: rgba(83, 186, 83, 0.4784313725);
+  padding: 10px 0px;
 }
 .main-container .board-container .note .body {
   padding: 30px;
@@ -102,7 +108,8 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-.sidebar .naslov {
+.sidebar .noteTitle {
+  width: 100%;
   padding: 9px;
   font-size: 18px;
   border-width: 0px;
@@ -114,28 +121,15 @@
   box-shadow: 0px 0px 7px rgba(66, 66, 66, 0.24);
   text-shadow: -50px 0px 0px rgba(66, 66, 66, 0);
 }
-.sidebar .naslov:focus {
-  outline: none;
-}
-.sidebar .text {
-  padding: 9px;
-  font-size: 18px;
-  border-width: 0px;
-  border-color: #ffffff;
-  background-color: #FFFFFF;
-  color: #585656;
-  border-style: solid;
-  border-radius: 0px;
-  box-shadow: 0px 0px 7px rgba(66, 66, 66, 0.24);
-  text-shadow: -50px 0px 0px rgba(66, 66, 66, 0);
-}
-.sidebar .text:focus {
+.sidebar .noteTitle:focus {
   outline: none;
 }
 .sidebar .noteText {
   width: 100%;
   font-size: 17px;
   height: 50%;
+  padding: 5px;
+  margin: 15px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

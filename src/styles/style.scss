@@ -25,6 +25,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin: 20px;
+        min-height: 450px;
         .note {
             position: relative;
             // display: inline-block; 
@@ -44,6 +45,11 @@
                 background-repeat: no-repeat;
                 background-size: 30px 30px;
                 height: 40px;
+            }
+            .title {
+                text-align: center;
+                background-color: #53ba537a;
+                padding: 10px 0px;
             }
             .body {
                 padding: 30px;
@@ -105,22 +111,8 @@
             text-decoration: none;
         }
     }
-    .naslov {
-        padding: 9px;
-        font-size: 18px;
-        border-width: 0px;
-        border-color: #ffffff;
-        background-color: #FFFFFF;
-        color: #585656;
-        border-style: solid;
-        border-radius: 0px;
-        box-shadow: 0px 0px 7px rgba(66,66,66,.24);
-        text-shadow: -50px 0px 0px rgba(66,66,66,.0);
-        &:focus {
-            outline:none;
-        }
-    }
-    .text {
+    .noteTitle {
+        width: 100%;
         padding: 9px;
         font-size: 18px;
         border-width: 0px;
@@ -139,5 +131,7 @@
         width: 100%;
         font-size: 17px;
         height: 50%;
+        padding: 5px;
+        margin: 15px 0px;
     }
 }
